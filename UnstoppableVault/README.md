@@ -107,10 +107,10 @@ we're using ERC20 transfer function and send token to vault, it could be updated
     }
 ```
 
-#result
+# result
 ![스크린샷 2024-09-20 오전 1 07 54](https://github.com/user-attachments/assets/e1feef37-fc2e-49d1-80d1-5b0159a5b1cf)
 
-#Recommendations
+# Recommendations
 ``` solidity
         - if (convertToShares(totalSupply) != balanceBefore) revert InvalidBalance(); // enforce ERC4626 requirement // shares : DVT
         + assert(convertToShares(totalSupply) != balanceBefore);
